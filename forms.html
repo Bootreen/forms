@@ -3,66 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./forms.css" />
     <title>Eis bestellen</title>
   </head>
   <body>
     <main>
       <form
+        class="grid-top grid-left"
         method="GET"
         action="https://tmzhf4wztf.execute-api.eu-central-1.amazonaws.com/prod/formecho"
       >
-        <h1>Bestelle ein Eis</h1>
-        <label for="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          value=""
-          placeholder="Geben Sie Ihren Namen ein"
-        />
-        <label for="variant">Sorte</label>
-        <select id="variant" name="variant">
-          <option value="Amarulaeis">Amarulaeis</option>
-          <option value="Aprikosensorbet">Aprikosensorbet</option>
-          <option value="Baklava">Baklava</option>
-          <option value="Bananencurry">Bananencurry</option>
-          <option value="Biscoff Caramel">Biscoff Caramel</option>
-          <option value="Bourbon Vanilleeis">Bourbon Vanilleeis</option>
-          <option value="Black Forest">Black Forest</option>
-          <option value="Caramel Coffee">Caramel Coffee</option>
-          <option value="Cherry Choc Chip">Cherry Choc Chip</option>
-          <option value="Caipirinha">Caipirinha</option>
-          <option value="Granatapfel Mascarpone">Granatapfel Mascarpone</option>
-          <option value="Haselnusseis Praliné">Haselnusseis Praliné</option>
-          <option value="Honeycomb Candy">Honeycomb Candy</option>
-          <option value="Joghurteis mit Himbeere">
-            Joghurteis mit Himbeere
-          </option>
-          <option value="Kokoseis">Kokoseis</option>
-          <option value="Litschi Kokonuss">Litschi Kokonuss</option>
-          <option value="Macadamia Brittle">Macadamia Brittle</option>
-          <option value="Matcha Misu">Matcha Misu</option>
-          <option value="Pistazieneis">Pistazieneis</option>
-          <option value="Passionsfruit">Passionsfruit</option>
-          <option value="Pecan Cookie Crunch">Pecan Cookie Crunch</option>
-          <option value="Salted Caramel">Salted Caramel</option>
-          <option value="Tonka-Eis mit Himbeersorbet">
-            Tonka-Eis mit Himbeersorbet
-          </option>
-          <option value="Unicorn">Unicorn</option>
-        </select>
-        <input checked id="cup" name="type" value="cup" type="radio" />
-        <label for="cup">Becher</label>
-        <input id="waffle" name="type" value="waffle" type="radio" />
-        <label for="waffle">Waffel</label>
-        <input
-          id="delivery"
-          name="expressDelivery"
-          value="true"
-          type="checkbox"
-        />
-        <label for="delivery">Schnelle Lieferung</label>
+        <h2>Bestelle ein Eis</h2>
+        <div class="input-container">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value=""
+            placeholder="Geben Sie Ihren Namen ein"
+          />
+        </div>
+        <div class="input-container">
+          <label for="variant">Sorte</label>
+          <select id="variant" name="variant">
+            <option value="Amarulaeis">Amarulaeis</option>
+            <option value="Aprikosensorbet">Aprikosensorbet</option>
+            <option value="Baklava">Baklava</option>
+            <option value="Bananencurry">Bananencurry</option>
+            <option value="Biscoff Caramel">Biscoff Caramel</option>
+            <option value="Bourbon Vanilleeis">Bourbon Vanilleeis</option>
+            <option value="Black Forest">Black Forest</option>
+            <option value="Caramel Coffee">Caramel Coffee</option>
+            <option value="Cherry Choc Chip">Cherry Choc Chip</option>
+            <option value="Caipirinha">Caipirinha</option>
+            <option value="Granatapfel Mascarpone">
+              Granatapfel Mascarpone
+            </option>
+            <option value="Haselnusseis Praliné">Haselnusseis Praliné</option>
+            <option value="Honeycomb Candy">Honeycomb Candy</option>
+            <option value="Joghurteis mit Himbeere">
+              Joghurteis mit Himbeere
+            </option>
+            <option value="Kokoseis">Kokoseis</option>
+            <option value="Litschi Kokonuss">Litschi Kokonuss</option>
+            <option value="Macadamia Brittle">Macadamia Brittle</option>
+            <option value="Matcha Misu">Matcha Misu</option>
+            <option value="Pistazieneis">Pistazieneis</option>
+            <option value="Passionsfruit">Passionsfruit</option>
+            <option value="Pecan Cookie Crunch">Pecan Cookie Crunch</option>
+            <option value="Salted Caramel">Salted Caramel</option>
+            <option value="Tonka-Eis mit Himbeersorbet">
+              Tonka-Eis mit Himbeersorbet
+            </option>
+            <option value="Unicorn">Unicorn</option>
+          </select>
+        </div>
+        <div class="radio-group-container">
+          <div class="radio-container">
+            <input checked id="cup" name="type" value="cup" type="radio" />
+            <label for="cup">Becher</label>
+          </div>
+          <div class="radio-container">
+            <input id="waffle" name="type" value="waffle" type="radio" />
+            <label for="waffle">Waffel</label>
+          </div>
+        </div>
+        <div class="checkbox-container">
+          <input
+            id="delivery"
+            name="expressDelivery"
+            value="true"
+            type="checkbox"
+          />
+          <label for="delivery">Schnelle Lieferung</label>
+        </div>
         <button type="submit">Jetzt Eis bestellen</button>
+      </form>
+      <form class="grid-top grid-right" action="">
+        <h2>Form placeholder</h2>
+      </form>
+      <form class="grid-bottom grid-left" action="">
+        <h2>Form placeholder</h2>
+      </form>
+      <form class="grid-bottom grid-right" action="">
+        <h2>Form placeholder</h2>
       </form>
     </main>
   </body>
