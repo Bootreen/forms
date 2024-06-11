@@ -1,0 +1,96 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin-bottom: 15rem;
+  display: grid;
+  grid-template-columns: 25rem 25rem;
+  grid-template-rows: 35rem 35rem;
+  grid-gap: 5rem;
+}
+
+.grid-top {
+  align-self: start;
+  margin-top: 15rem;
+}
+
+.grid-bottom {
+  align-self: start;
+}
+
+.grid-left {
+  justify-self: end;
+}
+
+.grid-right {
+  justify-self: start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+form > * {
+  padding: 0.4rem 0;
+}
+
+form h2 {
+  text-align: center;
+}
+
+form label {
+  margin-left: 0.25rem;
+}
+
+form > button {
+  font-size: medium;
+  background-color: #8cba80;
+  margin-top: 0.5rem;
+  border: 0.075rem solid black;
+  border-radius: 0.5rem;
+}
+
+form > button:hover {
+  background-color: #cacf85;
+}
+
+form > div > input,
+form > div > select {
+  font-size: medium;
+  margin-top: 0.25rem;
+  height: 1.8rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.radio-group-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-container input {
+  margin-bottom: 0.5rem;
+}
